@@ -1,0 +1,14 @@
+{
+  "name": "google-translate-extension",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "description": "My google translate extension",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://translate.google.com/*"
+      ],
+      "js": ["onLangChanged.js"]
+    }
+  ]
+}
