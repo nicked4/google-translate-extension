@@ -8,6 +8,8 @@ const observedButton = buttons.filter(
 const mainLangButton = buttons.filter((b) => b.innerText === mainLang)[1];
 const subLangButton = buttons.filter((b) => b.innerText === subLang)[1];
 
+observedButton.getAttribute('aria-selected') === 'false' && observedButton.click();
+
 const mo = new MutationObserver(() => {
   const [ detectedLang, autoDetection ] = observedButton.innerText.split(' - ');
 
